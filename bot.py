@@ -4,6 +4,7 @@ import os
 
 # Токен бота (добавляется в Render → Environment Variables)
 API_TOKEN = os.getenv("BOT_TOKEN")
+print("✅ Bot is starting...")
 
 if not API_TOKEN:
     raise ValueError("❌ BOT_TOKEN не найден! Добавь его в переменные окружения Render.")
