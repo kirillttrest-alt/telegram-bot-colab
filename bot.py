@@ -2,11 +2,11 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
 
-# Токен бота (добавляется в Render → Environment Variables)
+# Токен бота (Railway → Variables)
 API_TOKEN = os.getenv("BOT_TOKEN")
 
 if not API_TOKEN:
-    raise ValueError("❌ BOT_TOKEN не найден! Добавь его в переменные окружения Render.")
+    raise ValueError("❌ BOT_TOKEN не найден! Добавь его в переменные окружения Railway.")
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
