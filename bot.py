@@ -4,7 +4,6 @@ import os
 
 # Токен бота (добавляется в Render → Environment Variables)
 API_TOKEN = os.getenv("BOT_TOKEN")
-print("✅ Bot is starting...")
 
 if not API_TOKEN:
     raise ValueError("❌ BOT_TOKEN не найден! Добавь его в переменные окружения Render.")
@@ -27,4 +26,5 @@ async def start(message: types.Message):
     )
 
 if __name__ == "__main__":
+    print("✅ Bot is starting...")
     executor.start_polling(dp, skip_updates=True)
