@@ -2,11 +2,11 @@ from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import os
 
-# Токен бота (Railway → Variables)
+# Токен бота из переменной окружения (Fly.io → secrets)
 API_TOKEN = os.getenv("BOT_TOKEN")
 
 if not API_TOKEN:
-    raise ValueError("❌ BOT_TOKEN не найден! Добавь его в переменные окружения Railway.")
+    raise ValueError("❌ BOT_TOKEN не найден! Добавь его через `fly secrets set BOT_TOKEN=...`.")
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(bot)
